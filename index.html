@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Muthu Shravan Sundaram, Mechanical Design Engineer. MSc TU Delft. Modular flexible endoscope, robotics and precision mechanisms.">
 <title>Muthu Shravan Sundaram</title>
+<meta name="description" content="Muthu Shravan Sundaram, Mechanical Design Engineer. MSc TU Delft. Medical devices, robotics and precision mechanisms.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112..125,500..900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -69,14 +69,13 @@ nav.top ul a:hover { color: var(--hero-ink); }
 .hero { background: var(--hero); color: var(--hero-ink); overflow: hidden; }
 .hero .wrap { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; padding-block: 64px 72px; }
 .hero .label { color: var(--glow); }
-.hero h1 { font-size: clamp(2.6rem, 6.4vw, 5.4rem); font-weight: 900; font-stretch: 118%; letter-spacing: -0.01em; margin-top: 18px; }
+.hero-name { margin: 0; font: 900 clamp(2.5rem, 5.8vw, 4.6rem)/1.02 var(--display); font-stretch: 118%; letter-spacing: -0.01em; color: var(--hero-ink); text-wrap: balance; }
+.hero-role { margin: 12px 0 0; font: 600 clamp(1.05rem, 2.1vw, 1.45rem)/1.3 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--glow); }
+.hero h1 { font-size: clamp(1.5rem, 2.8vw, 2.3rem); font-weight: 800; font-stretch: 112%; letter-spacing: 0; margin-top: 26px; line-height: 1.15; }
 .hero h1 em { font-style: normal; color: var(--glow); }
 .hero p.lede { color: var(--hero-muted); font-size: 1.12rem; max-width: 34em; margin: 22px 0 30px; }
 .hero p.lede strong { color: var(--hero-ink); font-weight: 600; }
 .ctas { display: flex; flex-wrap: wrap; gap: 12px; }
-.hero p.avail { margin: 22px 0 0; font: 500 0.78rem/1.6 var(--mono); color: var(--hero-muted); max-width: 40em; }
-.hero p.avail strong { color: var(--glow); font-weight: 500; }
-.pubs strong { color: var(--ink); font-weight: 700; }
 .btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 20px; border-radius: 6px; font: 600 0.95rem var(--body); text-decoration: none; border: 1px solid transparent; cursor: pointer; }
 .btn.primary { background: var(--glow); color: #062120; }
 .btn.primary:hover { filter: brightness(1.08); }
@@ -85,18 +84,18 @@ nav.top ul a:hover { color: var(--hero-ink); }
 .stage { margin: 0; justify-self: center; width: min(100%, 380px); }
 .stage .photo { aspect-ratio: 3 / 4; max-width: 100%; border-radius: 10px; overflow: hidden; background: #dedbd6; border: 1px solid #ffffff24; box-shadow: 0 20px 50px #00000088; }
 .stage .photo img { width: 100%; height: 100%; object-fit: contain; display: block; }
-.stage figcaption { margin-top: 14px; text-align: center; color: var(--hero-muted); font: 500 0.72rem var(--mono); letter-spacing: 0.1em; text-transform: uppercase; }
+.stage figcaption { margin-bottom: 12px; text-align: center; color: var(--hero-muted); font: 500 0.72rem var(--mono); letter-spacing: 0.1em; text-transform: uppercase; }
 @media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; padding-block: 44px 56px; } .stage { width: min(100%, 320px); } }
 
 /* TITLE BLOCK */
 .titleblock { background: var(--surface); border-bottom: 1px solid var(--line); }
-.titleblock dl { display: grid; grid-template-columns: repeat(4, 1fr); margin: 0; }
+.titleblock dl { display: grid; grid-template-columns: repeat(6, 1fr); margin: 0; }
 .titleblock div { padding: 18px 20px; border-left: 1px solid var(--line); min-width: 0; }
 .titleblock div:first-child { border-left: 0; }
 .titleblock dt { color: var(--muted); }
 .titleblock dd { margin: 6px 0 0; font: 800 1.35rem/1.15 var(--display); font-stretch: 112%; font-variant-numeric: tabular-nums; }
 .titleblock dd small { display: block; font: 400 0.78rem/1.4 var(--body); color: var(--muted); margin-top: 4px; }
-@media (max-width: 960px) { .titleblock dl { grid-template-columns: repeat(2, 1fr); } .titleblock div:nth-child(3) { border-left: 0; } .titleblock div:nth-child(n+3) { border-top: 1px solid var(--line); } }
+@media (max-width: 960px) { .titleblock dl { grid-template-columns: repeat(3, 1fr); } .titleblock div:nth-child(4) { border-left: 0; } .titleblock div:nth-child(n+4) { border-top: 1px solid var(--line); } }
 @media (max-width: 520px) { .titleblock dl { grid-template-columns: repeat(2, 1fr); } .titleblock div { border-left: 0 !important; border-top: 1px solid var(--line); } .titleblock div:nth-child(-n+2) { border-top: 0; } }
 
 /* SECTIONS */
@@ -118,7 +117,8 @@ section.block { padding-block: 84px; }
 .gallery img { width: 100%; height: 260px; object-fit: contain; background: #fff; display: block; }
 .gallery figure.wide img { height: auto; max-height: 480px; }
 .gallery figure.contain img { object-fit: contain; background: #fff; }
-.gallery figure.contain.wide img { height: 300px; max-height: none; }
+.gallery figure.contain img { height: 380px; max-height: none; }
+.gallery figure.strip img { height: auto; max-height: none; max-width: 560px; margin: 0 auto; }
 figcaption.fig { padding: 9px 12px; font: 400 0.78rem/1.45 var(--body); color: var(--muted); border-top: 1px solid var(--line); }
 figcaption.fig b { font: 500 0.7rem var(--mono); letter-spacing: 0.1em; color: var(--accent); margin-right: 6px; }
 .steps { list-style: none; margin: 8px 0 24px; padding: 0; display: grid; gap: 0; counter-reset: s; }
@@ -193,38 +193,176 @@ figcaption.fig b { font: 500 0.7rem var(--mono); letter-spacing: 0.1em; color: v
 @media (max-width: 640px) { .contact .wrap { grid-template-columns: 1fr; } .contact img { width: 120px; height: 120px; } }
 footer { background: var(--hero); color: var(--hero-muted); border-top: 1px solid #ffffff14; }
 footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding-block: 18px; font: 400 0.75rem var(--mono); }
+
+/* CATEGORY INDEX */
+.cats { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 40px; padding: 0; list-style: none; }
+.cats a { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); text-decoration: none; font: 500 0.85rem var(--body); color: var(--ink); }
+.cats a:hover { border-color: var(--accent); color: var(--accent); }
+.cats a span { font: 500 0.7rem var(--mono); color: var(--muted); }
+.cat { scroll-margin-top: 80px; }
+.cat + .cat { margin-top: 52px; }
+.cat-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; border-bottom: 2px solid var(--ink); padding-bottom: 10px; margin-bottom: 20px; }
+.cat-head h3 { font-size: 1.5rem; font-weight: 800; font-stretch: 112%; }
+.cat-head p { margin: 0; color: var(--muted); font-size: 0.92rem; }
+.tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.tile { display: grid; grid-template-rows: auto 1fr; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; text-decoration: none; color: inherit; min-width: 0; transition: border-color .15s, transform .15s; }
+.tile:hover { border-color: var(--accent); transform: translateY(-2px); }
+.tile img { width: 100%; height: 210px; object-fit: contain; background: #fff; border-bottom: 1px solid var(--line); }
+.tile .body { padding: 18px 18px 20px; display: flex; flex-direction: column; gap: 8px; }
+.tile .meta { color: var(--accent); }
+.tile h4 { margin: 0; font: 800 1.2rem/1.15 var(--display); font-stretch: 112%; text-wrap: balance; }
+.tile p { margin: 0; color: var(--muted); font-size: 0.92rem; }
+.tile .more { margin-top: auto; padding-top: 6px; font: 600 0.85rem var(--body); color: var(--accent); }
+.tile.feature { grid-column: span 2; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: auto; }
+.tile.feature img { height: 100%; min-height: 260px; border-bottom: 0; border-right: 1px solid var(--line); }
+.tile.feature h4 { font-size: 1.55rem; }
+@media (max-width: 960px) { .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .tiles { grid-template-columns: minmax(0, 1fr); } .tile.feature { grid-column: auto; grid-template-columns: minmax(0, 1fr); } .tile.feature img { height: 220px; min-height: 0; border-right: 0; border-bottom: 1px solid var(--line); } .tile img { height: 190px; } }
+
+/* PROJECT PAGES */
+.phead { background: var(--hero); color: var(--hero-ink); }
+.phead .wrap { padding-block: 44px 48px; }
+.crumbs { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; color: var(--hero-muted); }
+.crumbs a { color: var(--glow); text-decoration: none; }
+.crumbs a:hover { text-decoration: underline; }
+.phead h1 { font-size: clamp(2.1rem, 5vw, 3.8rem); font-weight: 900; font-stretch: 116%; margin-top: 14px; }
+.phead .sum { color: var(--hero-muted); font-size: 1.08rem; max-width: 40em; margin: 16px 0 0; }
+.phead .sum strong { color: var(--hero-ink); font-weight: 600; }
+.facts { display: flex; flex-wrap: wrap; gap: 10px 28px; margin: 22px 0 0; padding: 0; list-style: none; }
+.facts li { font: 500 0.78rem var(--mono); color: var(--hero-muted); }
+.facts b { color: var(--hero-ink); font-weight: 500; }
+.pbody { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 44px; align-items: start; padding-block: 56px 72px; }
+.pbody > * { min-width: 0; }
+.story section + section { margin-top: 34px; }
+.story h2 { font-size: 0.78rem; font-family: var(--mono); font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+.story p { margin: 0 0 14px; color: var(--muted); }
+.story p strong { color: var(--ink); font-weight: 600; }
+.story ul.points { margin: 0 0 14px; padding-left: 18px; color: var(--muted); }
+.story ul.points li { margin-bottom: 8px; }
+.story ul.points strong { color: var(--ink); font-weight: 600; }
+.story .note { font-size: 0.85rem; border-left: 3px solid var(--line); padding-left: 12px; }
+.result { display: flex; flex-wrap: wrap; gap: 12px; margin: 4px 0 16px; }
+.result div { flex: 1 1 90px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); padding: 12px 14px; }
+.result b { display: block; font: 800 1.4rem/1.1 var(--display); font-stretch: 112%; color: var(--accent); font-variant-numeric: tabular-nums; }
+.result span { font-size: 0.82rem; color: var(--muted); }
+.figs { display: grid; gap: 14px; position: sticky; top: 76px; }
+.figs figure { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.figs img { width: 100%; height: auto; max-height: 460px; object-fit: contain; background: #fff; }
+.figs .scroll { overflow-x: auto; background: #fff; }
+.figs .scroll img { min-width: 600px; max-height: none; }
+.pager { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; border-top: 1px solid var(--line); padding-block: 28px 56px; }
+.pager a { display: block; padding: 16px 18px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); text-decoration: none; min-width: 0; }
+.pager a:hover { border-color: var(--accent); }
+.pager .label { color: var(--muted); }
+.pager b { display: block; margin-top: 4px; font: 700 1rem/1.3 var(--display); font-stretch: 110%; }
+.pager .next { text-align: right; }
+@media (max-width: 900px) { .pbody { grid-template-columns: minmax(0, 1fr); } .figs { position: static; order: -1; } }
+@media (max-width: 520px) { .pager { grid-template-columns: 1fr; } .pager .next { text-align: left; } }
+
+
+/* MENU */
+.navl { display: flex; align-items: center; gap: 14px; }
+.burger { display: inline-grid; gap: 4px; width: 38px; height: 34px; place-content: center; background: transparent; border: 1px solid #ffffff2e; border-radius: 6px; cursor: pointer; padding: 0; }
+.burger span { display: block; width: 18px; height: 2px; background: var(--hero-ink); border-radius: 2px; }
+.burger:hover { border-color: var(--glow); }
+nav.top ul a[aria-current="page"] { color: var(--glow); }
+.scrim { position: fixed; inset: 0; z-index: 40; background: #0008; opacity: 0; transition: opacity .2s; }
+.drawer { position: fixed; top: 0; bottom: 0; left: 0; z-index: 50; width: min(340px, 88vw); background: var(--hero); color: var(--hero-ink); padding: calc(18px + env(safe-area-inset-top, 0px)) 22px calc(22px + env(safe-area-inset-bottom, 0px)) max(22px, env(safe-area-inset-left, 0px)); overflow-y: auto; transform: translateX(-100%); transition: transform .22s ease; display: flex; flex-direction: column; gap: 14px; box-shadow: 8px 0 40px #0006; }
+body.menu-open .drawer { transform: none; }
+body.menu-open .scrim { opacity: 1; }
+.drawer-top { display: flex; justify-content: space-between; align-items: center; padding-bottom: 12px; border-bottom: 1px solid #ffffff1c; }
+.drawer-close { width: 36px; height: 36px; border-radius: 6px; border: 1px solid #ffffff2e; background: transparent; color: var(--hero-ink); font-size: 1.4rem; line-height: 1; cursor: pointer; }
+.drawer-close:hover { border-color: var(--glow); color: var(--glow); }
+.drawer-nav { display: flex; flex-direction: column; }
+.drawer-nav .dn { display: block; padding: 12px 4px; font: 800 1.35rem/1.2 var(--display); font-stretch: 112%; text-decoration: none; color: var(--hero-ink); border-bottom: 1px solid #ffffff12; }
+.drawer-nav .dn:hover { color: var(--glow); }
+.drawer-nav .ext { font-size: 1rem; font-weight: 600; color: var(--hero-muted); }
+.drawer-sub { padding: 6px 4px 12px; border-bottom: 1px solid #ffffff12; }
+.drawer-sub .label { color: var(--glow); margin: 12px 0 4px; font-size: 0.65rem; }
+.drawer-sub ul { list-style: none; margin: 0; padding: 0; }
+.drawer-sub a { display: block; padding: 5px 0 5px 10px; border-left: 2px solid #ffffff1c; color: var(--hero-muted); text-decoration: none; font-size: 0.9rem; line-height: 1.35; }
+.drawer-sub a:hover { color: var(--hero-ink); border-left-color: var(--glow); }
+.drawer-foot { margin-top: auto; color: var(--hero-muted); font: 500 0.72rem var(--mono); }
+body.menu-open { overflow: hidden; }
+@media (prefers-reduced-motion: reduce) { .drawer, .scrim { transition: none; } }
+
+/* HOME + CONTACT */
+.btn.outline { border-color: var(--line); color: var(--ink); background: var(--surface); }
+.btn.outline:hover { border-color: var(--accent); color: var(--accent); }
+.cta-band { background: var(--hero); color: var(--hero-ink); }
+.cta-band .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; padding-block: 56px; }
+.cta-band h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; font-stretch: 118%; }
+.contact-page { min-height: calc(100vh - 120px); display: flex; align-items: center; }
+.contact-page .wrap { width: 100%; }
+
+/* PROJECT SIDEBAR */
+.layout { display: grid; grid-template-columns: 236px minmax(0, 1fr); gap: 40px; align-items: start; }
+.layout > * { min-width: 0; }
+.side { position: sticky; top: 72px; max-height: calc(100vh - 90px); overflow-y: auto; padding: 40px 0 40px; }
+.side-back { display: inline-block; font: 600 0.85rem var(--body); color: var(--accent); text-decoration: none; margin-bottom: 18px; }
+.side-back:hover { text-decoration: underline; }
+.side-cat { color: var(--muted); margin: 18px 0 8px; }
+.side-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.side-list a { display: grid; grid-template-columns: 40px 1fr; gap: 10px; align-items: center; padding: 6px 8px; border-radius: 6px; text-decoration: none; color: var(--ink); font-size: 0.86rem; line-height: 1.3; border-left: 3px solid transparent; }
+.side-list a:hover { background: var(--surface); }
+.side-list a.cur { background: var(--surface); border-left-color: var(--accent); font-weight: 600; }
+.side-list img { width: 40px; height: 40px; object-fit: contain; background: #fff; border: 1px solid var(--line); border-radius: 4px; }
+.side-mobile { display: none; }
+.pmain .pbody { padding-top: 44px; }
+@media (max-width: 1180px) { .pbody { grid-template-columns: minmax(0, 1fr); } .figs { position: static; order: -1; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); } }
+@media (max-width: 900px) {
+  .layout { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .side { display: none; }
+  .side-mobile { display: block; margin-top: 20px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+  .side-mobile summary { cursor: pointer; padding: 12px 14px; font: 600 0.9rem var(--body); color: var(--accent); }
+  .side-mobile[open] { padding-bottom: 10px; }
+  .side-mobile .side-cat, .side-mobile .side-list { padding-inline: 10px; }
+  .pmain .pbody { padding-top: 24px; }
+}
 </style>
 </head>
 <body>
-
 <nav class="top" aria-label="Main">
   <div class="wrap">
-    <a class="mark" href="#top">M<span>/</span>S<span>/</span>S</a>
-    <ul>
-      <li><a href="#endoscope">Endoscope</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <div class="navl">
+      <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+      <a class="mark" href="index.html">M<span>/</span>S<span>/</span>S</a>
+    </div>
+    <ul><li><a href="index.html" aria-current="page">Home</a></li><li><a href="projects.html">Projects</a></li><li><a href="contact.html">Contact</a></li></ul>
     <span class="status">Available immediately · NL</span>
   </div>
 </nav>
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" aria-label="Site menu" hidden>
+  <div class="drawer-top">
+    <a class="mark" href="index.html">M<span>/</span>S<span>/</span>S</a>
+    <button class="drawer-close" id="drawer-close" type="button" aria-label="Close menu">&times;</button>
+  </div>
+  <nav class="drawer-nav" aria-label="Site">
+    <a class="dn" href="index.html">Home</a>
+    <a class="dn" href="projects.html">Projects</a>
+    <div class="drawer-sub"><p class="label">Medical devices</p><ul><li><a href="endoscope.html#top">Modular flexible endoscope</a></li><li><a href="rais.html#top">Steerable pen camera for the RAIS device</a></li><li><a href="knee-brace.html#top">Thermal knee brace</a></li></ul><p class="label">Rehab and assistive robotics</p><ul><li><a href="feeding-robot.html#top">Assistive feeding robot for people with MS</a></li></ul><p class="label">Underwater robotics</p><ul><li><a href="auv.html#top">Autonomous underwater vehicle</a></li><li><a href="grippers.html#top">Underwater grippers and pneumatic arm</a></li></ul><p class="label">Simulation and precision</p><ul><li><a href="micromixer.html#top">Acoustic mixing in a circular-well microchannel</a></li><li><a href="esa-joint.html#top">Compliant planar joint for ESA microvibration isolation</a></li></ul></div>
+    <a class="dn" href="contact.html">Contact</a>
+    <a class="dn ext" href="https://www.linkedin.com/in/muthu-shravan-sundaram/" target="_blank" rel="noopener">LinkedIn ↗</a>
+  </nav>
+  <p class="drawer-foot">Available immediately · Netherlands</p>
+</aside>
 
 <header class="hero" id="top">
   <div class="wrap">
     <div>
-      <p class="label">Muthu Shravan Sundaram · Mechanical Design Engineer</p>
+      <p class="hero-name">Muthu Shravan Sundaram</p>
+      <p class="hero-role">Mechanical Design Engineer</p>
       <h1>I design mechanisms and <em>build them</em> until they work.</h1>
       <p class="lede">MSc Mechanical Engineering (BioMechanical Design), TU Delft. For my thesis I designed and built a <strong>modular flexible endoscope</strong> from scratch: suction, irrigation, insufflation and a steerable bending section that now bends <strong>210° to 214° in all four directions</strong>.</p>
       <div class="ctas">
-        <a class="btn primary" href="#endoscope">See the endoscope</a>
+        <a class="btn primary" href="projects.html">See the projects</a>
         <a class="btn ghost" href="https://www.linkedin.com/in/muthu-shravan-sundaram/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
-      <p class="avail"><strong>Start immediately</strong> · Rijswijk, NL · No sponsorship needed until Sep 2027 (zoekjaar), then eligible for the kennismigrant permit at the reduced salary threshold for recent graduates</p>
     </div>
     <figure class="stage">
-      <div class="photo"><img src="images/endoscope-full.png" alt="Full modular flexible endoscope prototype with handle and insertion tube"></div>
       <figcaption>Modular flexible endoscope · MSc thesis prototype</figcaption>
+      <div class="photo"><img src="images/endoscope-full.png" alt="Full modular flexible endoscope prototype with handle and insertion tube"></div>
     </figure>
   </div>
 </header>
@@ -236,136 +374,51 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
       <div><dt class="label">Bending range</dt><dd>210–214°<small>all four directions, measured</small></dd></div>
       <div><dt class="label">Conference papers</dt><dd>3<small>incl. 1 Best Paper Award</small></dd></div>
       <div><dt class="label">BTech</dt><dd>9.49 / 10<small>Institute Gold Medal</small></dd></div>
+      <div><dt class="label">Work rights</dt><dd>Netherlands<small>Zoekjaar, to Sep 2027</small></dd></div>
+      <div><dt class="label">Start</dt><dd>Immediately<small>based in Rijswijk</small></dd></div>
     </dl>
   </div>
 </section>
 
-<section class="block" id="endoscope">
+<section class="block" id="featured">
   <div class="wrap">
     <div class="head">
-      <div>
-        <p class="label">MSc thesis · TU Delft · grade 9/10</p>
-        <h2>A modular, affordable flexible endoscope</h2>
-      </div>
-      <p>Commercial flexible endoscopes are expensive and need central reprocessing. I set out to build a modular one for low-resource settings, with a working channel, suction, irrigation and insufflation.</p>
+      <div><p class="label">Selected work</p><h2>Featured projects</h2></div>
+      <a class="btn outline" href="projects.html">All 8 projects →</a>
     </div>
-    <div class="case">
-      <div class="gallery">
-        <figure class="wide"><img src="images/endoscope-setup.png" alt="Complete endoscope setup with laptop live feed, endoscope, electronics box and power supply"><figcaption class="fig"><b>FIG. 1</b>Complete system: endoscope, electronics box and live camera feed.</figcaption></figure>
-        <figure class="contain wide"><img src="images/endoscope-cad.png" alt="SOLIDWORKS model of the endoscope handle"><figcaption class="fig"><b>FIG. 2</b>Handle in SOLIDWORKS.</figcaption></figure>
-      </div>
-      <div>
-        <h3>How the bending section got to 210–214°</h3>
-        <p>Steel tendons run through PTFE tubes, like a Bowden cable, from pulleys in the handle to the tip. It took four rounds to get there:</p>
-        <ol class="steps">
-          <li><span class="deg">~150°</span><span class="txt"><b>First build.</b> The tip bent, but well short of commercial scopes.</span></li>
-          <li><span class="deg">Creep</span><span class="txt"><b>Dyneema tendons stretched under load,</b> so I switched to steel.</span></li>
-          <li><span class="deg">Buckling</span><span class="txt"><b>The PTFE tubes bunched up</b> under the steel tendons, so I reinforced them externally and lubricated the wires.</span></li>
-          <li><span class="deg">210–214°</span><span class="txt"><b>Re-anchored each tendon</b> to wrap about 1.5 turns around its pulley. Final measured range below.</span></li>
-        </ol>
-        <div class="measure" aria-label="Measured bending angles">
-          <div><span class="label">Up</span><b>212°</b></div>
-          <div><span class="label">Down</span><b>214°</b></div>
-          <div><span class="label">Left</span><b>211°</b></div>
-          <div><span class="label">Right</span><b>210°</b></div>
-        </div>
-        <p>The detachable handle had to stay <strong>watertight without tools</strong> over repeated assembly. It failed several times before it did. I isolated one failure mode at a time and ran a <strong>DFMEA before each build</strong>. Arduino code (C/C++) runs the pumps and an automated end-of-procedure routine. Four supervisors, a professor at TU Delft and two surgeons and an endoscopist at Erasmus MC, shaped the requirements.</p>
-        <ul class="tags">
-          <li>SOLIDWORKS</li><li>DFMEA</li><li>DfM / DfA</li><li>FDM · SLA</li><li>PLA · PETG · TPU</li><li>Fluidics</li><li>Arduino (C/C++)</li>
-        </ul>
-      </div>
+    <div class="tiles">
+<a class="tile" href="endoscope.html">
+  <img src="images/endoscope-setup.png" alt="" loading="lazy">
+  <div class="body">
+    <p class="label meta">MSc thesis · TU Delft · grade 9/10</p>
+    <h4>Modular flexible endoscope</h4>
+    <p>A modular, affordable flexible endoscope with suction, irrigation, insufflation and a steerable tip that bends 210° to 214° in all four directions.</p>
+    <span class="more">Read the project →</span>
+  </div>
+</a>
+<a class="tile" href="micromixer.html">
+  <img src="images/mixer-concept.png" alt="" loading="lazy">
+  <div class="body">
+    <p class="label meta">Microfluidics research · Best Paper, ICRAFMN 2023</p>
+    <h4>Acoustic mixing in a circular-well microchannel</h4>
+    <p>COMSOL models of acoustic standing waves that mix two fluids, with a 90.2% peak mixing index.</p>
+    <span class="more">Read the project →</span>
+  </div>
+</a>
+<a class="tile" href="auv.html">
+  <img src="images/auv-build.jpg" alt="" loading="lazy">
+  <div class="body">
+    <p class="label meta">AUV Society · SAUVC 2022 · MATE ROV</p>
+    <h4>Autonomous underwater vehicle</h4>
+    <p>A 5-DOF AUV with two pressure hulls. I made the manufacturing drawings, then led the 12-person team.</p>
+    <span class="more">Read the project →</span>
+  </div>
+</a>
     </div>
   </div>
 </section>
 
-<section class="block alt" id="projects">
-  <div class="wrap">
-    <div class="head">
-      <div>
-        <p class="label">More work</p>
-        <h2>Mechanisms, robots and fluids</h2>
-      </div>
-      <p>Course projects, team projects and research from TU Delft and IIITDM Kancheepuram.</p>
-    </div>
-    <div class="grid">
-      <article class="proj">
-        <div class="pics"><img src="images/rais-cad.jpg" class="contain" alt="SOLIDWORKS model of the steerable pen camera linkage"><img src="images/rais-prototype.jpg" alt="3D-printed pen camera attachment mounted on the surgical retractor"></div>
-        <div class="body">
-          <p class="label meta">Surgical device · Course project</p>
-          <h3>Steerable pen camera for the RAIS device</h3>
-          <p>An affordable steerable camera attachment for <b>gasless laparoscopic surgery</b> in low- and middle-income countries. I designed miniaturised linkages that fit the retractor, printed them, and integrated a commercial pen camera with the existing hardware.</p>
-          <ul class="tags"><li>Kinematic linkages</li><li>SOLIDWORKS</li><li>3D printing</li></ul>
-        </div>
-      </article>
-      <article class="proj">
-        <div class="pics"><img src="images/esa-cad.jpg" class="contain" alt="CAD model of the compliant planar joint with three folded leaf springs"><img src="images/esa-fem.jpg" class="contain" alt="COMSOL von Mises stress plot of the joint"></div>
-        <div class="body">
-          <p class="label meta">Precision mechanism · Team project</p>
-          <h3>Compliant planar joint for ESA microvibration isolation</h3>
-          <p>A flexure joint for a spacecraft hexapod: near-zero stiffness in three planar directions, high stiffness in the other three. The team optimised the folded leaf springs in MATLAB. <b>I built the parametric SOLIDWORKS assembly and ran the COMSOL FEA with a teammate.</b></p>
-          <ul class="tags"><li>Compliant mechanisms</li><li>COMSOL FEA</li><li>SOLIDWORKS</li></ul>
-        </div>
-      </article>
-      <article class="proj">
-        <div class="pics"><img src="images/auv-build.jpg" alt="Assembled AUV with orange aluminium frame and pressure hulls"><img src="images/auv-cad.jpg" class="contain" alt="CAD model of the AUV frame"></div>
-        <div class="body">
-          <p class="label meta">Underwater robotics · AUV Society · SAUVC 2022 · MATE ROV</p>
-          <h3>Autonomous underwater vehicle</h3>
-          <p>A 5-DOF battery-powered AUV with two pressure hulls, four vectored thrusters and custom aluminium frames. I made the 2D manufacturing drawings and worked with the fabricators. Later, as <b>Team Lead of 12</b>, I ran the budget and integration and tracked down the real causes of the leaks.</p>
-          <ul class="tags"><li>Fusion 360</li><li>Manufacturing drawings</li><li>Waterproofing</li></ul>
-        </div>
-      </article>
-      <article class="proj">
-        <div class="pics"><img src="images/gripper-cad.jpg" class="contain" alt="CAD of a gear-driven gripper"><img src="images/gripper-print.jpg" alt="3D-printed gripper prototype"></div>
-        <div class="body">
-          <p class="label meta">Manipulator design · MATE ROV</p>
-          <h3>Underwater grippers</h3>
-          <p>A gear-driven gripper with miniaturised linkages for a mini ROV, printed and tested. For MATE ROV 2022 I also engineered a <b>pneumatic arm</b>: one cylinder drives a two-link elbow, a second closes the gripper.</p>
-          <ul class="tags"><li>Gear trains</li><li>Pneumatics</li><li>3D printing</li></ul>
-        </div>
-      </article>
-      <article class="proj">
-        <div class="pics"><img src="images/feeding-robot.jpg" class="contain" alt="SOLIDWORKS assembly of the assistive feeding arm, three-quarter view"><img src="images/feeding-robot-side.jpg" class="contain" alt="SOLIDWORKS assembly of the assistive feeding arm, side view with the links extended"></div>
-        <div class="body">
-          <p class="label meta">Mechatronics · Course project</p>
-          <h3>Assistive feeding robot for people with MS</h3>
-          <p>A 3-DOF telescopic arm with Maxon motors sized from payload calculations, plus a control concept with passive damping and a PID / notch filter to suppress tremor. It switches between assistive and rehabilitation modes.</p>
-          <ul class="tags"><li>SOLIDWORKS</li><li>Motor sizing</li><li>Control design</li></ul>
-        </div>
-      </article>
-      <article class="proj">
-        <div class="pics"><img src="images/knee-brace-cad.jpg" class="contain" alt="CAD model of the knee brace"><img src="images/knee-brace-test.jpg" alt="Knee brace prototype being tested with electronics"></div>
-        <div class="body">
-          <p class="label meta">Medical device · Best Interdisciplinary Project</p>
-          <h3>Thermal knee brace</h3>
-          <p>A knee orthosis for osteoarthritis pain with Peltier modules and a temperature sensor for alternating hot and cold therapy, controlled from MATLAB. Built and tested as a working prototype.</p>
-          <ul class="tags"><li>Peltier</li><li>MATLAB</li><li>Prototyping</li></ul>
-        </div>
-      </article>
-      <article class="proj mixer">
-        <figure class="strip">
-          <div class="scroll"><img src="images/mixer-alternating.png" alt="Six COMSOL concentration maps of the circular well over 200 seconds, as the acoustic frequency alternates between 1 and 2 MHz and the two fluids mix"></div>
-          <figcaption>Alternating 1 MHz and 2 MHz every 0.5 s: the two fluids (red and blue) mix over 200 s</figcaption>
-        </figure>
-        <div class="row">
-          <figure class="concept">
-            <img src="images/mixer-concept.png" alt="Two layered fluids in the well rearranged into concentric rings by an acoustic standing wave">
-            <figcaption>A standing wave moves each fluid to the pressure nodes or antinodes</figcaption>
-          </figure>
-          <div class="body">
-            <p class="label meta">Microfluidics research · Best Paper, ICRAFMN 2023</p>
-            <h3>Acoustic mixing in a circular-well microchannel</h3>
-            <p>COMSOL models of acoustic standing waves that push fluids of different density towards nodes and antinodes, plus microchannel prototypes I fabricated to validate the relocation experimentally.</p>
-            <p class="stat"><span>90.2%</span>peak mixing index, 60.6% better than passive diffusion</p>
-            <ul class="tags"><li>COMSOL CFD</li><li>Acoustofluidics</li><li>Lab work</li></ul>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="block" id="skills">
+<section class="block alt" id="skills">
   <div class="wrap two">
     <div>
       <div class="head"><div><p class="label">Toolkit</p><h2>Skills</h2></div></div>
@@ -380,49 +433,46 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
     <div>
       <div class="head"><div><p class="label">Research</p><h2>Publications</h2></div></div>
       <ul class="pubs">
-        <li><span class="badge">Best Paper</span><b>Acoustic Mixing of Co-flowing Inhomogeneous Fluids in a Circular Well Microchannel</b><span>Jayakumar, <strong>Sundaram</strong>, Rajendran, Subramani · ICRAFMN 2023, Bangalore</span></li>
-        <li><span class="badge">IEEE OCEANS</span><b>Design and Performance Analysis of a Bio-Inspired Remotely Operated Robot</b><span>Sukesh, Dasyam, <strong>Sundaram</strong>, Iyengar · IEEE OCEANS 2022, Chennai</span></li>
-        <li><span class="badge">Oral presentation</span><b>Mechanical Design, Analysis and Development of an AUV for SAUVC</b><span>Sukesh, <strong>Sundaram</strong>, Iyengar · SAUVC Conference 2022, Singapore</span></li>
+        <li><span class="badge">Best Paper</span><b>Acoustic Mixing of Co-flowing Inhomogeneous Fluids in a Circular Well Microchannel</b><span>Jayakumar, Sundaram, Rajendran, Subramani · ICRAFMN 2023, Bangalore</span></li>
+        <li><span class="badge">IEEE OCEANS</span><b>Design and Performance Analysis of a Bio-Inspired Remotely Operated Robot</b><span>Sukesh, Dasyam, Sundaram, Iyengar · IEEE OCEANS 2022, Chennai</span></li>
+        <li><span class="badge">Oral presentation</span><b>Mechanical Design, Analysis and Development of an AUV for SAUVC</b><span>Sukesh, Sundaram, Iyengar · SAUVC Conference 2022, Singapore</span></li>
       </ul>
     </div>
   </div>
 </section>
 
-<section class="contact" id="contact">
+<section class="cta-band">
   <div class="wrap">
-    <img src="images/muths.jpg" alt="Portrait of Muthu Shravan Sundaram">
-    <div>
-      <p class="label" style="color:var(--glow)">Contact</p>
-      <h2>Let's build the next one.</h2>
-      <p>I'm looking for R&amp;D, product development and mechanical design roles in medical devices, robotics and precision engineering. Based in Rijswijk and available immediately. My zoekjaar lets me work without sponsorship until Sep 2027, and as a TU Delft graduate I qualify for the kennismigrant permit at the reduced salary threshold.</p>
-      <div class="row">
-        <code id="email">shravanmuthu1809@gmail.com</code>
-        <button class="btn primary" id="copy" type="button">Copy email</button>
-        <a class="btn ghost" href="https://www.linkedin.com/in/muthu-shravan-sundaram/" target="_blank" rel="noopener">LinkedIn</a>
-        <span id="copied" aria-live="polite"></span>
-      </div>
-      <p style="margin-top:16px">Phone: <span style="color:var(--hero-ink);font-family:var(--mono)">+31 6 17585933</span></p>
-    </div>
+    <h2>Let's build the next one.</h2>
+    <div class="ctas"><a class="btn primary" href="contact.html">Get in touch</a><a class="btn ghost" href="https://www.linkedin.com/in/muthu-shravan-sundaram/" target="_blank" rel="noopener">LinkedIn</a></div>
   </div>
 </section>
+
 <footer><div class="wrap"><span>Muthu Shravan Sundaram · MSc Mechanical Engineering, TU Delft</span><span>Rijswijk, Netherlands</span></div></footer>
 
 <script>
 (function () {
-  var btn = document.getElementById("copy"), out = document.getElementById("copied"), mail = document.getElementById("email");
-  btn.addEventListener("click", function () {
-    var text = mail.textContent.trim();
-    function fallback() {
-      var range = document.createRange(); range.selectNodeContents(mail);
-      var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(range);
-      out.textContent = "Selected: press Ctrl+C";
-    }
-    try {
-      navigator.clipboard.writeText(text).then(function () { out.textContent = "Copied"; }, fallback);
-    } catch (e) { fallback(); }
-  });
+  var btn = document.getElementById("burger"), dr = document.getElementById("drawer"),
+      scrim = document.getElementById("scrim"), x = document.getElementById("drawer-close");
+  if (!btn || !dr) return;
+  function open() {
+    dr.hidden = false; scrim.hidden = false;
+    requestAnimationFrame(function () { document.body.classList.add("menu-open"); });
+    btn.setAttribute("aria-expanded", "true"); x.focus();
+  }
+  function close() {
+    document.body.classList.remove("menu-open");
+    btn.setAttribute("aria-expanded", "false");
+    setTimeout(function () { dr.hidden = true; scrim.hidden = true; }, 220);
+    btn.focus();
+  }
+  btn.addEventListener("click", open);
+  x.addEventListener("click", close);
+  scrim.addEventListener("click", close);
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !dr.hidden) close(); });
+  try { if ("scrollRestoration" in history) history.scrollRestoration = "manual"; } catch (e) {}
+  if (!location.hash || location.hash === "#top") window.scrollTo(0, 0);
 })();
 </script>
-
 </body>
 </html>
