@@ -76,6 +76,9 @@ nav.top ul a:hover { color: var(--hero-ink); }
 .hero p.lede { color: var(--hero-muted); font-size: 1.12rem; max-width: 34em; margin: 22px 0 30px; }
 .hero p.lede strong { color: var(--hero-ink); font-weight: 600; }
 .ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero p.avail { margin: 22px 0 0; font: 500 0.78rem/1.6 var(--mono); color: var(--hero-muted); max-width: 40em; }
+.hero p.avail strong { color: var(--glow); font-weight: 500; }
+.pubs span strong { color: var(--ink); font-weight: 700; }
 .btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 20px; border-radius: 6px; font: 600 0.95rem var(--body); text-decoration: none; border: 1px solid transparent; cursor: pointer; }
 .btn.primary { background: var(--glow); color: #062120; }
 .btn.primary:hover { filter: brightness(1.08); }
@@ -89,13 +92,13 @@ nav.top ul a:hover { color: var(--hero-ink); }
 
 /* TITLE BLOCK */
 .titleblock { background: var(--surface); border-bottom: 1px solid var(--line); }
-.titleblock dl { display: grid; grid-template-columns: repeat(6, 1fr); margin: 0; }
+.titleblock dl { display: grid; grid-template-columns: repeat(4, 1fr); margin: 0; }
 .titleblock div { padding: 18px 20px; border-left: 1px solid var(--line); min-width: 0; }
 .titleblock div:first-child { border-left: 0; }
 .titleblock dt { color: var(--muted); }
 .titleblock dd { margin: 6px 0 0; font: 800 1.35rem/1.15 var(--display); font-stretch: 112%; font-variant-numeric: tabular-nums; }
 .titleblock dd small { display: block; font: 400 0.78rem/1.4 var(--body); color: var(--muted); margin-top: 4px; }
-@media (max-width: 960px) { .titleblock dl { grid-template-columns: repeat(3, 1fr); } .titleblock div:nth-child(4) { border-left: 0; } .titleblock div:nth-child(n+4) { border-top: 1px solid var(--line); } }
+@media (max-width: 960px) { .titleblock dl { grid-template-columns: repeat(2, 1fr); } .titleblock div:nth-child(3) { border-left: 0; } .titleblock div:nth-child(n+3) { border-top: 1px solid var(--line); } }
 @media (max-width: 520px) { .titleblock dl { grid-template-columns: repeat(2, 1fr); } .titleblock div { border-left: 0 !important; border-top: 1px solid var(--line); } .titleblock div:nth-child(-n+2) { border-top: 0; } }
 
 /* SECTIONS */
@@ -345,7 +348,6 @@ body.menu-open { overflow: hidden; }
     <a class="dn" href="contact.html">Contact</a>
     <a class="dn ext" href="https://www.linkedin.com/in/muthu-shravan-sundaram/" target="_blank" rel="noopener">LinkedIn ↗</a>
   </nav>
-  <p class="drawer-foot">Available immediately · Netherlands</p>
 </aside>
 
 <header class="hero" id="top">
@@ -359,6 +361,7 @@ body.menu-open { overflow: hidden; }
         <a class="btn primary" href="projects.html">See the projects</a>
         <a class="btn ghost" href="https://www.linkedin.com/in/muthu-shravan-sundaram/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
+      <p class="avail"><strong>Start immediately</strong> · Rijswijk, NL · No sponsorship needed until Sep 2027 (zoekjaar), then eligible for the kennismigrant permit at the reduced salary threshold for recent graduates</p>
     </div>
     <figure class="stage">
       <figcaption>Modular flexible endoscope · MSc thesis prototype</figcaption>
@@ -374,8 +377,6 @@ body.menu-open { overflow: hidden; }
       <div><dt class="label">Bending range</dt><dd>210–214°<small>all four directions, measured</small></dd></div>
       <div><dt class="label">Conference papers</dt><dd>3<small>incl. 1 Best Paper Award</small></dd></div>
       <div><dt class="label">BTech</dt><dd>9.49 / 10<small>Institute Gold Medal</small></dd></div>
-      <div><dt class="label">Work rights</dt><dd>Netherlands<small>Zoekjaar, to Sep 2027</small></dd></div>
-      <div><dt class="label">Start</dt><dd>Immediately<small>based in Rijswijk</small></dd></div>
     </dl>
   </div>
 </section>
@@ -433,9 +434,9 @@ body.menu-open { overflow: hidden; }
     <div>
       <div class="head"><div><p class="label">Research</p><h2>Publications</h2></div></div>
       <ul class="pubs">
-        <li><span class="badge">Best Paper</span><b>Acoustic Mixing of Co-flowing Inhomogeneous Fluids in a Circular Well Microchannel</b><span>Jayakumar, Sundaram, Rajendran, Subramani · ICRAFMN 2023, Bangalore</span></li>
-        <li><span class="badge">IEEE OCEANS</span><b>Design and Performance Analysis of a Bio-Inspired Remotely Operated Robot</b><span>Sukesh, Dasyam, Sundaram, Iyengar · IEEE OCEANS 2022, Chennai</span></li>
-        <li><span class="badge">Oral presentation</span><b>Mechanical Design, Analysis and Development of an AUV for SAUVC</b><span>Sukesh, Sundaram, Iyengar · SAUVC Conference 2022, Singapore</span></li>
+        <li><span class="badge">Best Paper</span><b>Acoustic Mixing of Co-flowing Inhomogeneous Fluids in a Circular Well Microchannel</b><span>Jayakumar, <strong>Sundaram</strong>, Rajendran, Subramani · ICRAFMN 2023, Bangalore</span></li>
+        <li><span class="badge">IEEE OCEANS</span><b>Design and Performance Analysis of a Bio-Inspired Remotely Operated Robot</b><span>Sukesh, Dasyam, <strong>Sundaram</strong>, Iyengar · IEEE OCEANS 2022, Chennai</span></li>
+        <li><span class="badge">Oral presentation</span><b>Mechanical Design, Analysis and Development of an AUV for SAUVC</b><span>Sukesh, <strong>Sundaram</strong>, Iyengar · SAUVC Conference 2022, Singapore</span></li>
       </ul>
     </div>
   </div>
