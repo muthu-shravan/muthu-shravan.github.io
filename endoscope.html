@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Modular flexible endoscope · Muthu Shravan Sundaram</title>
-<meta name="description" content="My MSc thesis: a modular flexible endoscope, designed to be low-cost and built and tested from scratch, with a working channel, suction, irrigation, insufflation and a tendon-driven bending section.">
+<meta name="description" content="My MSc thesis: a modular flexible endoscope, built and tested from scratch and designed to be low-cost, with a working channel, suction, irrigation, insufflation and a tendon-driven bending section.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112..125,500..900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -352,7 +352,7 @@ body.menu-open { overflow: hidden; }
   <div class="wrap">
     <p class="label crumbs"><a href="projects.html">Projects</a><span>/</span><a href="projects.html#medical">Medical and assistive devices</a></p>
     <h1>Modular flexible endoscope</h1>
-    <p class="sum">My MSc thesis: a <strong>modular flexible endoscope</strong>, designed to be low-cost and built and tested from scratch, with a working channel, suction, irrigation, insufflation and a tendon-driven bending section.</p>
+    <p class="sum">My MSc thesis: a <strong>modular flexible endoscope</strong>, built and tested from scratch and designed to be low-cost, with a working channel, suction, irrigation, insufflation and a tendon-driven bending section.</p>
     <ul class="facts"><li>Grade: <b>9/10</b></li><li>Bending: <b>210°–214°, all four directions</b></li><li>Dates: <b>Feb to Aug 2026</b></li><li>Tools: <b>SOLIDWORKS, FDM, SLA, DFMEA</b></li></ul>
   </div>
 </header>
@@ -375,13 +375,13 @@ body.menu-open { overflow: hidden; }
       <section><h2>What I did</h2><p><strong>A modular architecture.</strong> One common handle with a detachable, toolless insertion tube, designed to stay watertight. A damaged tube can be replaced on its own, and the idea is that one handle can serve different tubes and that handles can be sized for different users.</p>
 <p><strong>The bending section.</strong> Steel tendons run through PTFE tubes, like a Bowden cable, from pulleys in the handle to the tip. It took four rounds to get there:</p>
 <ol class="steps">
-<li><span class="deg">~150°</span><span class="txt"><b>First build.</b> The tip bent, but well short of commercial scopes.</span></li>
+<li><span class="deg">~150°</span><span class="txt"><b>First build.</b> The tip bent, but fell well short of commercial scopes.</span></li>
 <li><span class="deg">Creep</span><span class="txt"><b>Dyneema tendons stretched under load,</b> so I switched to steel.</span></li>
 <li><span class="deg">Buckling</span><span class="txt"><b>The PTFE tubes bunched up</b> under the steel tendons, so I reinforced them externally and lubricated the wires.</span></li>
 <li><span class="deg">210°–214°</span><span class="txt"><b>Wrapped each tendon</b> about 1.5 turns around its pulley, adding friction through the capstan effect so the pulley could transmit more pulling force.</span></li>
 </ol>
 <p><strong>Fluid connections designed to seal on every reconnection.</strong> The suction, irrigation and insufflation lines had to reconnect without tools whenever the tube was attached. Straight dispensing needles in matching ports did not seal, so I switched to a male taper seating into a female port, where the widening diameter forms the seal.</p>
-<p>Every component was designed around its fabrication constraints, balancing tight space against what each part had to do. I ran a <strong>DFMEA before each build</strong> across the mechanical, fluidic and electronic subsystems, designed every part for FDM and SLA printing, and chose PLA, PETG or TPU per function. The pumps are Arduino-controlled, with an automated end-of-procedure routine. Four supervisors reviewed the requirements and each iteration: a professor at TU Delft, and two surgeons and an endoscopist at Erasmus MC.</p>
+<p>Every component was designed around its fabrication constraints, balancing tight space against what each part had to do. I ran a <strong>DFMEA before each build</strong> across the mechanical, fluidic and electronic subsystems, covering <strong>18 failure modes</strong> with a mitigation for each and prioritising the three high-risk modes in the electronics and tendon channels. I designed every part for FDM and SLA printing and chose PLA, PETG or TPU per function. The pumps are Arduino-controlled, with an automated end-of-procedure routine. Four supervisors reviewed the requirements and each iteration: a professor at TU Delft, and two surgeons and an endoscopist at Erasmus MC.</p>
 <p class="note">Internal design details are left out here while the work is being prepared for publication.</p></section>
       <section><h2>The result</h2><div class="result"><div><b>212°</b><span>Up</span></div><div><b>214°</b><span>Down</span></div><div><b>211°</b><span>Left</span></div><div><b>210°</b><span>Right</span></div></div>
 <p>A fully functional prototype with <strong>experimentally validated steering and fluidic subsystems</strong>: active articulation in all four directions, plus an integrated working channel, suction, irrigation and insufflation, all in a hand-held form factor. The thesis was graded <strong>9/10</strong>.</p></section>
